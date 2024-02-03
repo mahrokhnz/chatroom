@@ -1,0 +1,199 @@
+:root {
+    --nutural-color: #576574;
+    --nutural-light-color: #c8d6e5;
+    --padding: 12px;
+    --theme-color: #341f97;
+    --theme-light-color: #5f27cd;
+    --white-color: #fff;
+    --border-radius: 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        .chatRoom {
+            width: 800px;
+            height: 700px;
+            border: 1px var(--nutural-color) solid;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            border-radius: var(--border-radius);
+
+            .rooms {
+                display: flex;
+                flex-direction: column;
+
+                .createRoom {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 65px;
+                    padding: var(--padding);
+                    gap: var(--padding);
+                    border-bottom: 1px var(--nutural-color) solid;
+
+                    label {
+                        display: none;
+                    }
+
+                    input {
+                        height: 40px;
+                        padding: 8px;
+                        flex-grow: 1;
+                        outline: none;
+                        border: none;
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--nutural-light-color) 0 2px 3px 1px;
+                    }
+
+                    .createButton {
+                        padding: 0 12px;
+                        align-self: stretch;
+                        background-color: var(--theme-light-color);
+                        outline: none;
+                        border: none;
+                        color: var(--white-color);
+                        border-radius: var(--border-radius);
+                        cursor: pointer;
+                        transition: background-color 0.3s ease-in-out;
+                    }
+
+                    .createButton:hover {
+                        background-color: var(--theme-color);
+                    }
+                }
+
+                .roomsWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--padding);
+                    padding: var(--padding);
+                    overflow-y: scroll;
+                    height: 630px;
+
+                    .roomWrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 40px;
+                        padding: 8px;
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--nutural-light-color) 0 2px 3px 1px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease-in-out;
+
+                        .roomCount {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 25px;
+                            height: 25px;
+                            border-radius: var(--border-radius);
+                            background-color: var(--theme-light-color);
+                            color: var(--white-color);
+                            font-size: 15px;
+                        }
+                    }
+
+                    .selectedRoom {
+                        background-color: var(--nutural-light-color);
+                    }
+
+                    .roomWrapper:hover {
+                        background-color: var(--nutural-light-color);
+                    }
+                }
+            }
+
+            .messages {
+                display: flex;
+                flex-direction: column;
+                border-left: 1px var(--nutural-color) solid;
+
+                .roomInfo {
+                    display: flex;
+                    align-items: center;
+                    height: 65px;
+                    padding: var(--padding);
+                    gap: var(--padding);
+                    opacity: 0;
+                    border-bottom: 1px var(--nutural-color) solid;
+                }
+
+                .messagesWrapper {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--padding);
+                    padding: var(--padding);
+                    flex: 1 0 0;
+                    border-bottom: 1px var(--nutural-color) solid;
+                    height: 630px;
+
+                    .messageWrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: flex-start;
+                        gap: 5px;
+                        padding: 8px;
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--nutural-light-color) 0 1px 3px 1px;
+
+                        .messageUser {
+                            color: var(--theme-color);
+                        }
+
+                        .messageCreatedAt {
+                            font-size: 12px;
+                            align-self: flex-end;
+                            color: var(--nutural-color);
+                        }
+                    }
+                }
+
+                .sendMessage {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: var(--padding);
+                    padding: var(--padding);
+
+                    label {
+                        display: none;
+                    }
+
+                    .newMessage {
+                        flex-grow: 1;
+                        padding: 8px;
+                        outline: none;
+                        border: none;
+                        border-radius: var(--border-radius);
+                        box-shadow: var(--nutural-light-color) 0 2px 3px 1px;
+                    }
+
+                    .sendButton {
+                        width: 80px;
+                        background-color: var(--theme-light-color);
+                        outline: none;
+                        border: none;
+                        color: var(--white-color);
+                        border-radius: var(--border-radius);
+                        cursor: pointer;
+                        transition: background-color 0.3s ease-in-out;
+                    }
+
+                    .sendButton:hover {
+                        background-color: var(--theme-color);
+                    }
+                }
+            }
+        }
+    }
+}

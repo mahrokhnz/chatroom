@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <title>Chat Room</title>
+</head>
+<body>
+<main class="chatRoom">
+    <aside class="rooms">
+        <form class="createRoom">
+            <label for="createRoom"></label>
+            <input class="createRoomName" id="createRoom" type="text" placeholder="My room name...">
+            <button class="createButton">Create!</button>
+        </form>
+        <div class="roomsWrapper"></div>
+    </aside>
+    <aside class="messages">
+        <div class="roomInfo"></div>
+        <div class="messagesWrapper"></div>
+        <form class="sendMessage">
+            <label for="newMessage"></label>
+            <textarea class="newMessage" placeholder="Message..." name="newMessage" id="newMessage" cols="5" rows="5"></textarea>
+            <button type="submit" class="sendButton">Send!</button>
+        </form>
+    </aside>
+</main>
+<script type="module" src="scripts/script.js"></script>
+</body>
+</html>
