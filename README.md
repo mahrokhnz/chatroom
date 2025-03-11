@@ -7,7 +7,6 @@ Welcome to Chatroom Application repository! This is a real-time chat platform de
 - **Real-time Messaging**: Instant communication between multiple users using WebSocket technology.
 - **User Authentication**: Secure login and signup functionality to protect user data.
 - **Chat Rooms**: Join or create chat rooms to connect with others in private or group conversations.
-- **Responsive Design**: Optimized for use on desktops, tablets, and smartphones.
 
 ## Built With
 
